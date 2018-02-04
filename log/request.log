@@ -1,0 +1,171 @@
+2018-02-02 07:10:55,905 [Thread-4:123145421230080] [django.request:152] [base:get_response] [WARNING]- Not Found: /article
+2018-02-02 08:37:15,273 [Thread-2:123145339596800] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/article_page/article_id=1
+2018-02-02 08:40:14,199 [Thread-2:123145458454528] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/
+2018-02-02 09:32:40,716 [Thread-11:123145422229504] [django.request:158] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /novel/edit/
+2018-02-02 09:49:40,374 [Thread-3:123145310859264] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/
+2018-02-02 09:49:43,315 [Thread-4:123145315065856] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/article_page/article_id=1
+2018-02-02 09:50:11,262 [Thread-10:123145315065856] [django.request:158] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /novel/edit/action
+2018-02-02 10:26:09,654 [Thread-13:123145310859264] [django.request:158] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /novel/edit/action
+2018-02-02 10:34:01,658 [Thread-25:123145310859264] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /novel/articles/
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangbaiqiang/pycharm/yang/novel/views.py", line 17, in articles
+    return render(request,'novel/articles.html',{'articles':articles})
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'novel.views.edit_page' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2018-02-02 10:37:28,732 [Thread-29:123145310859264] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /novel/articles/
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangbaiqiang/pycharm/yang/novel/views.py", line 17, in articles
+    return render(request,'novel/articles.html',{'articles':articles})
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'novel.views.edit_page' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2018-02-02 10:42:07,589 [Thread-33:123145310859264] [django.request:158] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /novel/edit/action
+2018-02-02 10:49:37,440 [Thread-14:123145457803264] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /novel/edit/action
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangbaiqiang/pycharm/yang/novel/views.py", line 30, in edit_action
+    return render(request,'novel/articles.html',{'articles': articles})
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'e' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2018-02-02 10:49:51,639 [Thread-15:123145457803264] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /novel/edit/action
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangbaiqiang/pycharm/yang/novel/views.py", line 30, in edit_action
+    return render(request,'novel/articles.html',{'articles': articles})
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'e' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2018-02-02 10:52:35,880 [Thread-17:123145457803264] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /novel/articles/
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangbaiqiang/pycharm/yang/novel/views.py", line 17, in articles
+    return render(request,'novel/articles.html',{'articles':articles})
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'e' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2018-02-02 11:35:37,865 [Thread-3:123145479655424] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/edit/
+2018-02-02 11:35:39,249 [Thread-4:123145475448832] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/edit/
+2018-02-02 11:35:48,040 [Thread-5:123145479655424] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/edit/
+2018-02-02 12:21:44,246 [Thread-7:123145404837888] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/admin
+2018-02-02 15:41:02,247 [Thread-19:123145404837888] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/article_page/
+2018-02-02 15:43:40,928 [Thread-23:123145404837888] [django.request:152] [base:get_response] [WARNING]- Not Found: /novel/
+2018-02-02 15:43:49,812 [Thread-25:123145413251072] [django.request:152] [base:get_response] [WARNING]- Not Found: /articles
